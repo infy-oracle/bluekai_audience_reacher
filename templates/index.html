@@ -1,0 +1,66 @@
+
+<html>
+  <head>
+    <title>Audience Reach Grabber</title>
+   <link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+   <link rel="shortcut icon" href="/static/images/favicon.ico"/>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script src="/static/scripts/js/ajax_post.js"></script>
+
+  <!-- Alertify -->  
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css"/>    
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/themes/bootstrap.min.css"/>
+
+  </head>
+  <body>
+
+
+    <div id="container">
+
+      <div class="pagetitle">
+        <h1>Audience Reach Grabber</h1>
+      </div>
+      <div id="main">      
+
+        <div id="Upload">
+
+          <h3>Add your API keys</h3>        
+          
+          <p> Add them here and it will return all audiences with reach (<a target ="_blank" href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCDA/index.html#Developers/getting_started/getting_your_developer_keys.html%3FTocPath%3DAPI%2520Developer%2520Guide%7C_____1">How to Grab Your API Keys</a>)</p>
+          
+          <form class="form-signin" action="/category_campaign_grabber_queue" method="post" role="form">
+             
+             <div class="col-xs-8">
+               <input type="apiPublicKey" name="apiPublicKey" class="form-control .col-sm-*" placeholder="Enter Public Key" required autofocus><br>
+               <input type="apiSecretKey" name="apiSecretKey" class="form-control .col-sm-*" placeholder="Enter Secret Key" required><br>               
+               <button class="btn btn-lg btn-primary btn-block" type="button">Submit</button>
+
+               <h3>Results</h3>
+
+               <p>Audience Reach will be presented below in JSON format with details</p>
+
+              <figure class="highlight">
+                 <pre>
+                  <code class="language-html" data-lang="html">
+                    <span class="nt" id="apiResponse"></span>
+                  </code>
+                </pre>
+              </figure>
+
+              <h3>Running this yourself</h3>
+              <p> Please see <a target="_blank" href="/static/scripts/server_side/python/audience_reach.py">Python Script</a> if you'd like to build this yourself</p>
+               
+
+            </div>
+
+             
+         </form>
+
+        
+        </div>            
+        
+      </div>
+    </div>
+  </body>
+</html>
