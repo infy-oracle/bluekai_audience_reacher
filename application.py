@@ -24,11 +24,13 @@ import os
 import io
 import pickle
 import threading
+import platform
 
 # Normal Code
 application = Flask(__name__)
 
 print '\n### LOGGING : Flask started ###\n'
+print "PYTHON VERSION : ",platform.python_version()
 
 # Threading
 global lock
